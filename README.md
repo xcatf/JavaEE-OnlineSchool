@@ -1,17 +1,17 @@
 杏林网校
 ===========================
 ### 技术选型
-Spring + SpringMVC + MyBatis + JQuery + JSP + Bootstrap
+`Spring`  ` SpringMVC`  `MyBatis`  `JQuery`  `JSP`  `Bootstrap`
 
-### 环境依赖
-MySQL5.7 + MyEclipse2017 + JDK1.8 + Tomcat 8
+### 开发工具
+`mysql5.7` `MyEclipse2017`  `JDK1.8`  `Tomcat 8`
 
 ### 部署步骤
-1. JDK配置，MyEclipse导入项目
+1. jdk配置，MyEclipse导入项目
 
 
 2. 将项目部署在tomcat上，并在tomcat的conf的server.xml的虚拟路径配置：
-<Context docBase="E:\upload" path="/upload" reloadable="true"/>(后期将改为阿里远程仓库)
+`<Context docBase="E:\upload" path="/upload" reloadable="true"/>`
 
 3. 配置出现问题私聊邮箱:1013459920@qq.com
 
