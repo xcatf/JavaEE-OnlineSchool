@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xor.dao.RechargeRecordMapper">
+	<resultMap id="BaseResultMap" type="com.xor.model.RechargeRecord">
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="student_id" jdbcType="INTEGER" property="studentId" />
+		<result column="recharge_coin" jdbcType="INTEGER" property="rechargeCoin" />
+		<result column="record_time" jdbcType="TIMESTAMP" property="recordTime" />
+	</resultMap>
+
+	<select id="searchAllEntity" resultMap="BaseResultMap">
+		SELECT r.id, s.name AS
+		studentName, c.name AS collegeName,
+		r.recharge_coin,
+		r.record_time FROM
+		recharge_record AS r JOIN student
+		as s on
+		r.student_id = s.id JOIN
+		college AS c on c.id=s.college_id
+	</select>
+
+	<select id="searchEntityByName" parameterType="INTEGER"
+		resultMap="BaseResultMap">
+		SELECT r.id, s.name AS
+		studentName, c.name AS collegeName,
+		r.recharge_coin,
+		r.record_time FROM
+		recharge_record AS r JOIN student
+		as s on
+		r.student_id = s.id JOIN
+		college AS c on c.id=s.college_id
+		WHERE s.name=#{name}
+	</select>
+
+	<select id="searchEntityById" parameterType="INTEGER" resultMap="BaseResultMap">
+		SELECT r.id, s.name AS
+		studentName, c.name AS collegeName,
+		r.recharge_coin,
+		r.record_time FROM
+		recharge_record AS r JOIN student
+		as s on
+		r.student_id = s.id JOIN
+		college AS c on c.id=s.college_id
+		WHERE s.id=#{id}
+	</select>
+
+	<delete id="deleteEntityById" parameterType="int">
+		DELETE FROM
+		recharge_record WHERE id = #{id}
+	</delete>
+	
+	<insert id="saveEntity" parameterType="com.xor.model.RechargeRecord">
+		INSERT into recharge_record (
+		student_id, recharge_coin, record_time)
+		VALUES (#{studentId}, #{rechargeCoin}, #{recordTime})
+	</insert>
+
+</mapper>

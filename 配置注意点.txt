@@ -1,0 +1,12 @@
+项目配置：
+
+1.使用MySQL图形化工具新建数据库onlineschool，运行onlineschool.sql文件。完成数据库建立。
+
+2.使用MyEclipse或Eclipse导入项目，配置jar包。保证项目是web工程，并且添加需要的依赖。
+
+3.将项目部署到tomcat服务器上，在浏览器里面访问项目。【此时还不能完整视频、文档的上传和下载。还需要配置虚拟路径】
+
+        需要把upload目录复制到E盘根路径配置虚拟路径哈
+	在tomcat中配置虚拟路径，视频文件存放的位置！
+	在apache-tomcat-8.0.50\conf\sever.xml中加一行配置文件
+       <Context docBase="E:\upload" path="/upload" reloadable="true"/>

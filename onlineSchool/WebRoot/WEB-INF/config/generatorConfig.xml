@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<context id="context1">
+		<jdbcConnection connectionURL="jdbc:mysql://localhost:3306/onlineschool"
+			driverClass="com.mysql.jdbc.Driver" password="123456" userId="root" />
+		<javaModelGenerator targetPackage="com.xor.model"
+			targetProject="onlineSchool/src" />
+		<sqlMapGenerator targetPackage="com.xor.mapper"
+			targetProject="onlineSchool/src" />
+		<javaClientGenerator targetPackage="com.xor.dao"
+			targetProject="onlineSchool/src" type="XMLMAPPER" />
+
+		<table tableName="admin"></table>
+		<table tableName="college"></table>
+		<table tableName="course"></table>
+		<table tableName="course_file"></table>
+		<table tableName="course_video"></table>
+		<table tableName="discuss"></table>
+		<table tableName="discuss_post"></table>
+		<table tableName="notice"></table>
+		<table tableName="student"></table>
+		<table tableName="student_task"></table>
+		<table tableName="task"></table>
+		<table tableName="task_question"></table>
+		<table tableName="teacher"></table>
+
+	</context>
+</generatorConfiguration>
