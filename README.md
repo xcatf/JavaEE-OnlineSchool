@@ -13,7 +13,7 @@
 2. 将项目部署在tomcat上，并在tomcat的conf的server.xml的虚拟路径配置：
 `<Context docBase="E:\upload" path="/upload" reloadable="true"/>`
 
-3. 配置出现问题私聊邮箱:1013459920@qq.com
+3. 配置出现问题私聊邮箱:xcatf@qq.com
 
 
 ### 目录结构描述
